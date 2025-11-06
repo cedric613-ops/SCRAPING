@@ -1,0 +1,27 @@
+{
+  "products": [
+    {
+      "name": "Bundle 6 Booster Pokemon Flamme Blanche",
+      "url": "https://www.king-jouet.com/jeu-jouet/jeux-societes/cartes-a-collectionner/ref-997508-bundle-6-booster-pokemon-flamme-blanche.htm",
+      "enabled": true,
+      "max_purchases": 1
+    }
+  ],
+  "test_product": {
+    "name": "Bakugan Coffret Platinium",
+    "url": "https://www.king-jouet.com/jeu-jouet/jeux-exterieur/jeux-recreation/ref-905021-bakugan-coffret-platinium-battle-bundle-saison-4-evolutions.htm"
+  },
+  "monitoring": {
+    "check_interval_seconds": 30,
+    "max_retries": 3,
+    "screenshot_on_error": true,
+    "save_html_on_error": true
+  },
+  "purchase": {
+    "complete_payment": true,
+    "stop_after_first_purchase": false,
+    "notification_enabled": true
+  }
+}
+
+

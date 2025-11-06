@@ -1,0 +1,17 @@
+{
+    "products_to_monitor": [
+        {
+            "name": "POKEMON EV-10.5 BUNDLE 6 BOOSTERS V2 FR",
+            "url": "https://www.shopforgeek.com/en/POKEMON-EV-10-5-BUNDLE-6-BOOSTERS-V2-FR-244653.html",
+            "check_interval_seconds": 30,
+            "max_purchases": 1,
+            "status": "monitoring"
+        }
+    ],
+    "test_product": {
+        "name": "POKEMON EV-10.5 BUNDLE 6 BOOSTERS V2 FR (Test)",
+        "url": "https://www.shopforgeek.com/en/POKEMON-EV-10-5-BUNDLE-6-BOOSTERS-V2-FR-244653.html"
+    },
+    "notification_email": "your_email@example.com"
+}
+

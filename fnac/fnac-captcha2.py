@@ -257,37 +257,29 @@ class FnacLoginBot:
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
         options.add_argument("--disable-blink-features=AutomationControlled")
-        options.add_argument("--disable-webgl")
         options.add_argument("--lang=fr-FR")
-        options.add_argument(f"user-agent={self.user_agent}")
         
         # Options pour mieux voir l'interface
         options.add_argument("--start-maximized")
-        options.add_argument("--window-size=1200,900")
         
         # Désactivation des logs inutiles
         options.add_argument("--log-level=3")
         
-        # Configuration de undetected-chromedriver pour la version 139
+        # Configuration de undetected-chromedriver (simplifié)
+        try:
         driver = uc.Chrome(
             options=options,
-            version_main=139,
-            headless=False,
-            use_subprocess=True,
-            log_level=0
-        )
+                headless=False
+            )
+            print("✅ Driver initialisé avec options personnalisées")
+        except Exception as e:
+            print(f"⚠️ Erreur lors de l'initialisation avec Chrome: {e}")
+            print("Tentative avec configuration minimale...")
+            driver = uc.Chrome(headless=False)
+            print("✅ Driver initialisé avec configuration minimale")
         
-        # Masquage des propriétés WebDriver
-        driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
-            "source": """
-                Object.defineProperty(navigator, 'webdriver', {
-                    get: () => undefined
-                });
-                window.chrome = {
-                    runtime: {},
-                };
-            """
-        })
+        # Note: undetected-chromedriver gère déjà le masquage des propriétés WebDriver
+        # Pas besoin de commandes CDP supplémentaires
         
         return driver
 
@@ -553,7 +545,7 @@ class FnacLoginBot:
 
 if __name__ == "__main__":
     print("\n=== FNAC LOGIN BOT ULTIME ===")
-    print("⚠ Assurez-vous que Chrome version 139 est installé sur votre système")
+    print("⚠ Assurez-vous que Google Chrome est installé sur votre système")
     bot = FnacLoginBot()
     result = bot.run()
     print("\n📊 RESULTAT:", result)

@@ -1,0 +1,6 @@
+selenium>=4.15.0
+selenium-stealth>=1.0.6
+undetected-chromedriver>=3.5.4
+python-dotenv>=1.0.0
+solvecaptcha-python>=1.0.0
+

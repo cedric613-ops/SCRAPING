@@ -1,0 +1,9 @@
+# Dépendances pour le bot King Jouet
+selenium>=4.15.0
+undetected-chromedriver>=3.5.4
+selenium-stealth>=1.0.6
+requests>=2.31.0
+python-dotenv>=1.0.0
+webdriver-manager>=4.0.2
+
+
